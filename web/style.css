@@ -1,0 +1,756 @@
+
+/* =====================================
+   GLOBAL STYLES
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #100d24, #211044);
+    color: white;
+    min-height: 100vh;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: #17102d;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h2 {
+    color: #c5a5ff;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header a {
+    color: #c5a5ff;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: white;
+}
+
+/* =====================================
+   MAIN CONTAINER
+===================================== */
+
+.container {
+    text-align: center;
+    padding: 45px 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #c5a5ff;
+}
+
+.subtitle {
+    color: #bdb4d0;
+    margin: 15px 0 25px;
+}
+
+/* =====================================
+   COMMON BOXES
+===================================== */
+
+.game-box,
+.start-box,
+.auth-box,
+.leaderboard-box {
+    background: #24183f;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 0 25px #0005;
+}
+
+.auth-box {
+    max-width: 450px;
+}
+
+/* =====================================
+   LOGIN & REGISTRATION
+===================================== */
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+    background: linear-gradient(135deg, #100d24, #211044);
+}
+
+.auth-container .auth-box {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 40px 35px;
+    background: #24183f;
+    border: 1px solid #51466a;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.auth-box h1 {
+    color: #c5a5ff;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.auth-box h2 {
+    color: #c5a5ff;
+    margin-bottom: 12px;
+}
+
+.auth-box .subtitle {
+    color: #bdb4d0;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.auth-box input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 16px 0;
+    border: 1px solid #51466a;
+    border-radius: 10px;
+    background: #38285b;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+.auth-box input:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 8px rgba(167, 139, 250, 0.3);
+}
+
+.auth-box input::placeholder {
+    color: #c4b5d5;
+}
+
+.auth-box button {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #8b5cf6, #6366f1);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px #0005;
+}
+
+.auth-box p {
+    color: #bdb4d0;
+    margin-top: 18px;
+    line-height: 1.6;
+}
+
+.auth-box a {
+    color: #c5a5ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.auth-box a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.auth-box #message {
+    color: #fca5a5;
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+/* =====================================
+   INPUTS AND SELECT
+===================================== */
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #51466a;
+    border-radius: 8px;
+    background: #38285b;
+    color: white;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #a78bfa;
+}
+
+input::placeholder {
+    color: #c4b5d5;
+}
+
+/* =====================================
+   COMMON BUTTONS
+===================================== */
+
+button {
+    background: linear-gradient(90deg, #8b5cf6, #6366f1);
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    margin: 8px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.04);
+}
+
+button:disabled {
+    background: #51466a;
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* =====================================
+   GAME SCORE SECTION
+===================================== */
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.score-card {
+    flex: 1;
+    background: #38285b;
+    border: 1px solid #51466a;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.score-card span {
+    display: block;
+    color: #c4b5d5;
+    margin-bottom: 8px;
+}
+
+.score-card strong {
+    font-size: 25px;
+    color: #c5a5ff;
+}
+
+/* =====================================
+   CATEGORY DROPDOWN
+===================================== */
+
+.category-section {
+    margin: 25px auto;
+    text-align: center;
+}
+
+.category-section label {
+    display: block;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+#categorySelect {
+    width: 90%;
+    max-width: 380px;
+    padding: 13px;
+    border: 2px solid #a78bfa;
+    border-radius: 10px;
+    background: #211044;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#categorySelect option {
+    background: #211044;
+    color: white;
+}
+
+/* =====================================
+   HANGMAN DRAWING
+===================================== */
+
+.drawing-area {
+    background: #17102d;
+    border-radius: 12px;
+    margin: 20px auto;
+    padding: 15px;
+    min-height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#drawing {
+    color: #c5a5ff;
+    font-family: monospace;
+    font-size: 18px;
+    line-height: 1.25;
+    text-align: left;
+    white-space: pre;
+}
+
+/* =====================================
+   WORD DISPLAY
+===================================== */
+
+#wordDisplay {
+    letter-spacing: 10px;
+    margin: 25px 0;
+    color: #c5a5ff;
+    overflow-wrap: anywhere;
+    font-size: 30px;
+}
+
+.attempts-text {
+    margin: 15px;
+    color: #e9d5ff;
+}
+
+#attempts {
+    color: #fbbf24;
+}
+
+/* =====================================
+   HINT SECTION
+===================================== */
+
+.hint-box {
+    background: #38285b;
+    padding: 18px;
+    margin: 20px 0;
+    border-radius: 12px;
+}
+
+.hint-box h3 {
+    color: #c5a5ff;
+}
+
+.hint-box p {
+    margin: 12px;
+    color: #e9d5ff;
+    min-height: 22px;
+}
+
+/* =====================================
+   GAME MESSAGES
+===================================== */
+
+#message {
+    margin: 15px;
+    color: #e9d5ff;
+    min-height: 24px;
+}
+
+
+/* =====================================
+   VIRTUAL KEYBOARD
+===================================== */
+
+.keyboard-section {
+    margin: 25px auto;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.keyboard-section h3 {
+    color: #c5a5ff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.keyboard button {
+    width: 100%;
+    height: 48px;
+    margin: 0;
+    padding: 5px;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.keyboard button:hover:not(:disabled) {
+    background: linear-gradient(135deg, #a78bfa, #818cf8);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px #0005;
+}
+
+.keyboard button:disabled {
+    background: #51466a;
+    color: #aaa0bd;
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* =====================================
+   RESPONSIVE KEYBOARD
+===================================== */
+
+@media (max-width: 600px) {
+
+    .keyboard {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .keyboard button {
+        height: 42px;
+        font-size: 15px;
+        padding: 4px;
+    }
+
+    .keyboard-section h3 {
+        font-size: 18px;
+    }
+}
+
+
+/* =====================================
+   GAME CONTROLS
+===================================== */
+
+#gameControls {
+    margin-top: 15px;
+}
+
+#nextButton {
+    background: linear-gradient(90deg, #059669, #10b981);
+}
+
+#quitButton {
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+}
+
+#secondHintButton {
+    background: linear-gradient(90deg, #d97706, #f59e0b);
+}
+
+/* =====================================
+   LEADERBOARD
+===================================== */
+
+.leaderboard-box {
+    max-width: 900px;
+    overflow-x: auto;
+}
+
+#leaderboard {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+#leaderboard th,
+#leaderboard td {
+    padding: 15px 10px;
+    border-bottom: 1px solid #51466a;
+    text-align: center;
+}
+
+#leaderboard th {
+    color: #c5a5ff;
+    background: #38285b;
+}
+
+#leaderboard tr:hover {
+    background: #38285b;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 27px;
+    }
+
+    .game-box,
+    .auth-box {
+        padding: 20px;
+    }
+
+    .auth-container .auth-box {
+        padding: 30px 22px;
+    }
+
+    .auth-box h1 {
+        font-size: 26px;
+    }
+
+    #wordDisplay {
+        letter-spacing: 5px;
+        font-size: 23px;
+    }
+
+    header {
+        padding: 18px;
+    }
+
+    .game-info {
+        gap: 8px;
+    }
+
+    .score-card {
+        padding: 10px;
+    }
+
+    .guess-area {
+        flex-direction: column;
+    }
+
+    .guess-area input,
+    .guess-area button {
+        width: 100%;
+    }
+
+    #drawing {
+        font-size: 15px;
+    }
+}
+
+/* =====================================
+   TWO COLUMN GAME LAYOUT
+===================================== */
+
+.game-play-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: stretch;
+    margin: 25px 0;
+}
+
+/* LEFT PANEL */
+
+.hangman-panel {
+    background: #17102d;
+    border: 1px solid #51466a;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hangman-panel h3,
+.keyboard-panel h3 {
+    color: #c5a5ff;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.hangman-panel .drawing-area {
+    background: #24183f;
+    min-height: 220px;
+    margin: 0;
+}
+
+.hangman-panel #wordDisplay {
+    margin: 25px 0 15px;
+    font-size: 27px;
+    letter-spacing: 7px;
+}
+
+.hangman-panel .attempts-text {
+    margin: 10px 0;
+}
+
+/* RIGHT PANEL */
+
+.keyboard-panel {
+    background: #17102d;
+    border: 1px solid #51466a;
+    border-radius: 15px;
+    padding: 25px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.keyboard button {
+    width: 100%;
+    height: 48px;
+    margin: 0;
+    padding: 5px;
+    font-size: 17px;
+    border-radius: 9px;
+}
+
+.keyboard button:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px #0005;
+}
+
+.keyboard button:disabled {
+    background: #51466a;
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .game-play-layout {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .hangman-panel,
+    .keyboard-panel {
+        padding: 18px 12px;
+    }
+
+    .keyboard {
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .keyboard button {
+        height: 42px;
+        font-size: 15px;
+    }
+
+    .hangman-panel #wordDisplay {
+        font-size: 23px;
+        letter-spacing: 5px;
+    }
+
+}
+
+/* =====================================
+   GAME CONTROLS - NEXT & QUIT
+===================================== */
+
+#gameControls {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 25px auto 10px;
+    width: 100%;
+}
+
+#gameControls button {
+    display: inline-block;
+    min-width: 160px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#nextButton {
+    background: linear-gradient(90deg, #059669, #10b981);
+}
+
+#quitButton {
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+}
+
+#nextButton:hover:not(:disabled),
+#quitButton:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#gameControls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* SECOND HINT BUTTON */
+
+#secondHintButton {
+    background: linear-gradient(90deg, #d97706, #f59e0b);
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    #gameControls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #gameControls button {
+        width: 100%;
+        max-width: 280px;
+    }
+}

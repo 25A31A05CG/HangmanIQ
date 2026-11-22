@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman | Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>🎮 HANGMAN</h2>
+    <a href="login.html">Login</a>
+</header>
+
+<main class="container">
+
+    <div class="auth-box">
+        <h1>Create Account</h1>
+        <p class="subtitle">Join the Hangman Word Challenge!</p>
+
+        <form id="registerForm">
+
+            <input type="text" id="name"
+                   placeholder="Full Name" required>
+
+            <input type="password" id="password"
+                   placeholder="Create Password (8 characters minimum)"
+                   minlength="8" required>
+
+            <button type="submit">CREATE ACCOUNT</button>
+
+        </form>
+
+        <p id="message"></p>
+
+        <p class="auth-link">
+            Already registered?
+            <a href="login.html">Login here</a>
+        </p>
+    </div>
+
+</main>
+
+<script src="register.js"></script>
+</body>
+</html>

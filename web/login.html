@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hangman Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="auth-container">
+
+        <section class="auth-box">
+
+            <h1>🎮 Welcome Back!</h1>
+
+            <p class="subtitle">
+                Login to Hangman Word Challenge
+            </p>
+
+            <form id="loginForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter Player Name"
+                    autocomplete="username"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter Password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+            <p>
+                Don't have an account?
+                <a href="register.html">Create Account</a>
+            </p>
+
+            <p>
+                <a href="leaderboard.html">🏆 View Leaderboard</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="game-container">
+
+        <h1>🏆 Top 10 Players</h1>
+
+        <p>Hangman Word Challenge</p>
+
+        <table border="1" cellpadding="12" width="100%">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Player Name</th>
+                    <th>Total Points</th>
+                </tr>
+            </thead>
+
+            <tbody id="leaderboardBody">
+                <tr>
+                    <td colspan="3">Loading leaderboard...</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <button onclick="location.href='game.html'">
+            Play Again
+        </button>
+
+        <button onclick="logout()">
+            Logout
+        </button>
+
+    </main>
+
+    <script src="leaderboard.js"></script>
+
+</body>
+</html>
